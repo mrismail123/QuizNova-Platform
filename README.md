@@ -38,7 +38,7 @@
 For questions or suggestions:  
 📧 justwk12345@gmail.com
 
-🔗 Link to the platform :  []
+🔗 Link to the platform :  [ https://mrismail123.github.io/QuizNova-Platform/ ]
 
 ---
 
