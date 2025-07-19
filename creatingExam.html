@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/creatingExam.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="icon" href="photos/l2.png">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Start of header -->
+    <div class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./photos/l.png" alt="QuizNova Logo">
+            </a>
+            <a href="index.html">
+                <h1>QuizNova</h1>
+            </a>
+        </div>
+        <!-- Navigation bar -->
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#service">Services</a></li>
+                <li><a href="index.html#team">Team</a></li>
+                <li><a style="text-transform: none;" href="index.html">Sign out</a></li>
+                <!-- <img class="profile false" src="./photos/unknown.webp" alt=""> -->
+            </ul>
+        </div>
+    </div>
+    <!-- End of header -->
+    
+    <!-- Start of form -->
+    <div class="form">
+        <img src="./photos/paperCreateExam.png" alt="">
+        <form class="myForm" action="" method="post">
+            <h1>Exam: <span id="title">(Enter a title)</span></h1>
+            <label for="title">*Title</label><br>
+            <input class="examTitle" type="text" id="title" name="title" autofocus required><br><br>
+            <label for="group">*Group</label><br>
+            <select name="group" id="group" required>
+                <option value="" selected>Please select a group</option>
+                <optgroup label="smi">
+                    <option value="smi1">SMI1</option>
+                    <option value="smi2">SMI2</option>
+                    <option value="smi3">SMI3</option>
+                    <option value="smi4">SMI4</option>
+                    <option value="smi5">SMI5</option>
+                    <option value="smi6">SMI6</option>
+                </optgroup>
+                <optgroup label="sma">
+                    <option value="sma1">SMA1</option>
+                    <option value="sma2">SMA2</option>
+                    <option value="sma3">SMA3</option>
+                    <option value="sma4">SMA4</option>
+                    <option value="sma5">SMA5</option>
+                    <option value="sma6">SMA6</option>
+                </optgroup>
+                <optgroup label="smp">
+                    <option value="smp1">SMP1</option>
+                    <option value="smp2">SMP2</option>
+                    <option value="smp3">SMP3</option>
+                    <option value="smp4">SMP4</option>
+                    <option value="smp5">SMP5</option>
+                    <option value="smp6">SMP6</option>
+                </optgroup>
+                <optgroup label="smc">
+                    <option value="smc1">SMC1</option>
+                    <option value="smc2">SMC2</option>
+                    <option value="smc3">SMC3</option>
+                    <option value="smc4">SMC4</option>
+                    <option value="smc5">SMC5</option>
+                    <option value="smc6">SMC6</option>
+                </optgroup>
+            </select><br><br>
+            <button class="startCreating">Start Creating</button><br>
+        </form>
+    </div>
+    <div class="form2">
+        <form class="myForm2" method="post" action="">
+            <h1>Exam: <span id="title2"></span></h1>
+            <label for="question">*Question</label><br>
+            <input type="text" name="question" id="question" required><br><br>
+            <label for="choix1">*Option 1</label><br>
+            <input type="text" name="choix1" id="choix1" required><br><br>
+            <label for="choix2">*Option 2</label><br>
+            <input type="text" name="choix2" id="choix2" required><br><br>
+            <label for="choix3">*Option 3</label><br>
+            <input type="text" name="choix3" id="choix3" required><br><br>
+            <label for="choix4">*Option 4</label><br>
+            <input type="text" name="choix4" id="choix4" required><br><br>
+            <label for="response">*Correct Answer</label><br>
+            <select name="response" id="response">
+                <option value="choix1">Option 1</option>
+                <option value="choix2">Option 2</option>
+                <option value="choix3">Option 3</option>
+                <option value="choix4">Option 4</option>
+            </select><br><br>
+            <label for="mark">*Points</label><br>
+            <input type="number" name="mark" id="mark" required minlength="10" maxlength="20"><br><br>
+            <label for="duration">*Duration (minutes)</label><br>
+            <input type="number" name="duration" id="duration" required maxlength="30" minlength="10"><br><br>
+            <button class="addQuestion">Add Question</button>
+            <button class="addExam">Submit Exam</button>
+        </form>
+    </div>
+    <!-- End of form -->
+
+    <div class="hasQuestions">
+        <h1 style="margin-bottom: 10px;">Questions</h1>
+        <p class="youHaveNoQuestions">You have not added any questions yet</p>
+        <div class="questionsolder">
+            
+        </div>
+    </div>
+
+    <script src="creatingExam.js"></script>
+</body>
+</html>

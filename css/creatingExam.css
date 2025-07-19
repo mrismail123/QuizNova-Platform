@@ -1,0 +1,427 @@
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    background-attachment: fixed;
+    background-color: rgb(237, 237, 237) !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+}
+
+
+ul {
+    list-style: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+.header ul img {
+    border-radius: 50%;
+    max-width: 100%;
+    width: 45px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.header ul img:hover {
+    border: 4px solid black;
+}
+
+.header ul li{
+    display: inline;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    position: relative;   
+}
+
+.header ul li:last-child {
+    margin-right: 10px;
+}  
+
+
+.header ul li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width:0%;
+    height: 2px;
+    left: 0;
+    background-color: dodgerblue;
+    transition: 0.3s;
+}
+
+.header ul li:hover::before {
+    width: 100%;
+}
+
+
+
+.header ul li a {
+    color: rgb(0, 0, 0);
+    font-size: 1.3rem;
+}
+
+
+
+@media (max-width:530px){
+    ul li {
+        font-size: 1rem ;
+    }
+}
+
+
+
+ul li a:hover {
+    color: dodgerblue;
+}
+
+a {
+    text-decoration: none !important;
+    color: black;
+}
+
+
+/* start header */
+
+.header {
+    position: relative;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    height:120px;
+    /* box-shadow: rgba(0, 0, 0, 0.562) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px; */
+}
+
+.header .logo img {
+    max-width: 100%;
+    width: 120px;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo h1 {
+    /* text-shadow: 2px 2px 1px rgb(54, 52, 52); */
+    color: rgb(0, 0, 0);
+}
+
+
+
+@media (max-width:913px) {
+    .header  {
+        justify-content: center;
+        flex-direction: column;
+        height: 150px;
+    }
+    .header .nav {
+        margin: 0 auto;
+    }
+    .header .logo img {
+        margin-inline-start: -40px;
+    }
+
+    .header ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+@media (max-width:408px) {
+    .header ul li a {
+        font-size: 0.75rem;
+    }
+    .header .logo h1 {
+        font-size: 1.5rem;
+    }
+    .header .logo img  {
+        width: 100px;
+    }
+}
+
+/* end header */
+
+
+/* start form */
+
+div.formsHolder {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+div.form {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+    transition: 1.5s;
+    padding: 20px;
+}
+
+@media (max-width:1007px) {
+    div.form {
+        flex-direction: column-reverse;
+    }
+    div.form > img {
+        display: none;
+    }
+}
+
+@media (max-width:1130px) {
+    div.form > img {
+        width: 520px  !important ;
+    }
+}
+
+
+div.form > img {
+    max-width: 100%;
+    width: 550px;
+    transform: translateX(1000px);
+    transition: 1.5s;
+}
+
+div.form form {
+    transform: translateX(-1000px);
+    width: 700px;
+    max-width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.48);
+    border-radius: 10px;
+    transition: 1.5s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+div.form form h1 {
+    text-align: center;
+    color: black;
+}
+
+div.form form input , select {
+    width: 100%;
+    padding: 10px;    
+}
+
+
+div.form form button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: black;
+    color: wheat;
+    border: none;
+    color: white;
+    font-weight:500;
+}
+
+
+div.form2 {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 20px;
+    margin:100px 0px;
+}
+
+div.form2 form {
+    width: 700px;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.48);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+div.form2 form input , div.form2 form select {
+    padding: 10px;
+    width: 100%;
+}
+
+
+div.form2 form h1 {
+    text-align: center;
+    color: black;
+}
+
+
+div.form2 form button.addQuestion{
+    background-color: rgb(31, 31, 31);
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+}
+
+div.form2 form button.addExam{
+    color: rgb(0, 0, 0);
+    font-weight:normal;
+    background-color: rgb(8, 218, 103);
+}
+
+
+
+
+div.form2 form button {
+    width: 100%;
+    margin: 5px;
+    padding: 12px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+
+div.form form label , div.form2 form label {
+    font-weight: bold;
+}
+/* end form */
+
+
+
+.hasQuestions , .hasExams {
+    display: none;
+    margin-bottom: 50px;
+    padding: 10px;
+    color: rgb(9, 9, 9);
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.48);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+
+
+.hasQuestions > h1 , .hasQuestions > p , .hasExams > h1 , .hasExams > p {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* questions holder */
+
+
+.hasQuestions .questionsolder {
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(300px ,1fr));
+}
+
+
+
+
+.hasQuestions .questionsolder div {
+    padding: 15px 15px 0px 15px ;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 10px;
+    transition: 0.3s;
+    /* width: 350px; */
+    background-color: rgb(255, 255, 255);
+    color: #333;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+
+
+.hasQuestions .questionsolder div:hover {
+    transform: scale(1.02,1.02);
+}
+
+.hasQuestions .questionsolder div p:first-child {
+    text-align: center;
+    font-size: 1rem;
+    text-shadow: 1px 1px 1px rgb(197, 197, 197);
+    font-weight: bold;
+}
+
+.hasQuestions .questionsolder div p {
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 1px rgb(197, 197, 197);    
+}
+
+
+
+.hasQuestions .questionsolder div button.delete ,
+.hasQuestions .questionsolder div button.modify {
+    padding: 10px 25px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+
+.hasQuestions .questionsolder div button.delete {
+    background-color: rgb(34, 34, 34);
+    width: 100%;
+}
+.hasQuestions .questionsolder div button.modify {
+    background-color:rgb(0, 248, 12);
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* exams holder */
+
+.hasExams .examsHolder {
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
+}
+
+.hasExams .examsHolder div {
+    padding: 20px 25px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 10px;
+    transition: 0.3s;
+    background-color: rgb(255, 255, 255);
+    color: #333;
+    position: relative;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.hasExams .examsHolder div p:first-child {
+    text-shadow: 1px 1px 1px #b2b2b2;
+    font-size: 1.5rem;
+}
+
+.hasExams .examsHolder div button.deleteExam {
+    padding: 10px 25px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px;
+    width: calc(100% - 50px);
+}
+
+.hasExams .examsHolder div button.deleteExam {
+    background-color: red;
+}
+
+.hasExams .examsHolder div p:first-child {
+    text-transform: capitalize;
+
+}
+
+

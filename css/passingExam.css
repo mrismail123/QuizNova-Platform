@@ -1,0 +1,287 @@
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* overflow-x: hidden; */
+    background-attachment: fixed;
+    background-color: whitesmoke;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+}
+ul {
+    list-style: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+.header ul img {
+    border-radius: 50%;
+    max-width: 100%;
+    width: 45px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.header ul img:hover {
+    border: 4px solid black;
+}
+
+.header ul li{
+    display: inline;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    position: relative;   
+}
+
+.header ul li:last-child {
+    margin-right: 10px;
+}  
+
+
+.header ul li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width:0%;
+    height: 2px;
+    left: 0;
+    background-color: dodgerblue;
+    transition: 0.3s;
+}
+
+.header ul li:hover::before {
+    width: 100%;
+}
+
+
+
+.header ul li a {
+    color: rgb(0, 0, 0);
+    font-size: 1.3rem;
+}
+
+
+
+@media (max-width:530px){
+    ul li {
+        font-size: 1rem ;
+    }
+}
+
+
+
+ul li a:hover {
+    color: dodgerblue;
+}
+
+a {
+    text-decoration: none !important;
+    color: black;
+}
+
+
+
+/* start header */
+
+.header {
+    position: relative;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    height:120px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.header .logo img {
+    max-width: 100%;
+    width: 120px;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo h1 {
+    /* text-shadow: 2px 2px 1px rgb(54, 52, 52); */
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+}
+
+
+
+@media (max-width:913px) {
+    .header  {
+        justify-content: center;
+        flex-direction: column;
+        height: 150px;
+    }
+    .header .nav {
+        margin: 0 auto;
+    }
+    .header .logo img {
+        margin-inline-start: -40px;
+    }
+
+    .header ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+@media (max-width:408px) {
+    .header ul li a {
+        font-size: 0.75rem;
+    }
+    .header .logo h1 {
+        font-size: 1.5rem;
+    }
+    .header .logo img  {
+        width: 100px;
+    }
+}
+
+/* end header */
+
+/* start no exams available */
+
+.noExamAvailable {
+    position:absolute;
+    width: 100%;
+    height:calc(100% - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.noExamAvailable .noExamInfo {
+    text-align: center;
+}
+
+.noExamAvailable .noExamInfo i {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.noExamAvailable .noExamInfo p {
+    font-size: 1.3rem;
+}
+/* end no exams available */
+
+/* start exam list */
+
+.examsList {
+    margin: 100px 50px;
+    width: calc(100% - 100px);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(100% , 1fr));
+    position: relative;
+    
+}
+
+.examsList > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 220px;
+    margin-bottom: 10px;
+    padding: 0px 20px ;
+    border-radius: 10px;
+    background-color:rgba(255, 255, 255, 0.673);
+    transition: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* border:2px solid black; */
+}
+
+@media (max-width:995px) {
+    .examsList > div {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 10px 50px 10px;
+        height: 300px;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .examsList > div div.info p:nth-child(3) {
+        display: none;
+    }
+}
+
+
+.examsList > div .info p:first-child {
+    font-size: 1.8rem;
+}
+
+.examsList > div .info p:nth-child(2){
+    font-size: 1.1rem;
+}
+
+.examsList > div .info p:nth-child(3) {
+    font-size: 1.1rem;
+}
+
+.examsList > div > div.button button {
+    font-weight: 400;
+    text-transform: capitalize;
+    background-color: rgb(10, 10, 10);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+.examsList > div:hover {
+    transform: scale(1.01,1.01);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.examsList > div .info p {
+    font-weight: 300;
+}
+
+
+
+/* end exam list */
+
+
+.beforeStart {
+    width: 550px;
+    height: 350px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+    margin: 0 auto;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(47, 47, 47);
+    color: white;
+    opacity:0;
+}
+
+.beforeStart p {
+    font-size: 1.7rem;
+    text-transform: capitalize;
+}

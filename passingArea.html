@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/passingArea.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="icon" href="photos/l2.png">
+    <title>Document</title>
+</head>
+<body>
+    <div class="questionsAndChoicesHandler">
+        <div class="container questionTextAndDuration">
+            <div class="questionText">
+                <p></p>
+            </div>
+            <div style="display: flex;align-items: center;" class="duration">
+                <p class="questionTimer" style="font-size: 1.8rem;margin-bottom: 0;"></p>
+                <img class="horlage" style="width: 40px;" src="./photos/icons8-hourglass (1).gif" alt="">
+            </div>
+        </div>
+        <div class="container questionsAndChoices">
+            <div class="choice1"></div>
+            <div class="choice2"></div>
+            <div class="choice3"></div>
+            <div class="choice4"></div>
+        </div>            
+        <div class="container buttonNext"><button>Next</button></div>
+    </div>
+    <div class="result container">
+        <div class="success">
+            <h1 class="quizFinished">Quiz Finished !</h1>
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+            <lord-icon
+                src="https://cdn.lordicon.com/rhmbrqqg.json"
+                trigger="hover"
+                class="lordIcon">
+            </lord-icon>     
+            <img class="failing" src="./photos/redX.png" alt="">   
+        </div>
+        <h4 class="endMessage">You Have Finished The Exam with :</h4>
+        <p class="score"></p>
+        <button class="returnToList">return to list</button>
+    </div>
+    
+    <script  src="passingArea.js"></script>
+</body>
+</html>

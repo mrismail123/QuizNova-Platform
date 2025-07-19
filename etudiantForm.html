@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleForms.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="icon" href="photos/l2.png">
+    <title>QuizNova</title>
+</head>
+<body>
+    <!-- Start of header -->
+    <div class="header">
+        <div class="logo">
+            <img src="./photos/l2.png" alt="Logo QuizNova">
+            <a href="index.html">
+                <h1>QuizNova</h1>
+            </a>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#service">Services</a></li>
+                <li><a href="index.html#team">Team</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li class="lastBefore"><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End of header -->
+    
+    <!-- Start of landing section -->
+    <div class="landing">
+        <div id="loginSection" class="login-section">
+            <div class="left-text">
+                <h2>QuizNova</h2>
+                <p>Log in to access your personalized teaching dashboard and create engaging MCQ exams for your students.</p>
+            </div>
+            <div class="right-form">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email:</label>
+                        <input type="email" id="loginEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password:</label>
+                        <input type="password" id="loginPassword" name="password" required>
+                    </div>
+                    <button type="submit">SUBMIT</button>
+                </form>
+                <p style="margin-top: 20px;">Don't have an account? <a style="color: rgb(255, 255, 255);font-weight: bold;" href="#" id="switchToSignup">Click here to sign up</a></p>
+            </div>
+        </div>
+        <form id="newAccountForm" action="espaceEtudiant.html" method="post" target="_blank">
+            <div class="prenomNom">
+                <div class="nom">
+                    <label for="nom">Last Name:</label>
+                    <input class="nom" type="text" name="nom" id="nom" autofocus required>
+                </div> 
+                <div class="prenom">
+                    <label for="prenom">First Name:</label>
+                    <input class="prenom" type="text" name="prenom" id="prenom" required>
+                </div>
+            </div>
+            <div style="display: flex;" class="emailPassword">
+                <div class="email">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" class="email" id="email" required>
+                </div>
+                <div class="password">
+                    <label for="moteDePasse">Password:</label>
+                    <input type="password" name="password" class="password" id="moteDePasse" required>
+                </div>
+            </div>
+            <label for="etablissement">Institution:</label>
+            <input type="text" name="etablissement" class="etablissement" id="etablissement" required>
+            <label for="DateDeNaissance">Date of Birth:</label>
+            <input class="date" type="date" name="date" id="DateDeNaissance" required>
+            <div class="selects">
+                <label for="filiere">Department:</label>
+                <select class="filiere" name="fil" id="filiere" required>
+                    <option value="smi">SMI</option>
+                    <option value="sma">SMA</option>
+                    <option value="smp">SMP</option>
+                    <option value="smc">SMC</option>
+                    <option value="bcg">BCG</option>
+                </select>
+                <label for="genre">Gender:</label>
+                <select class="gender" name="gender" id="genre" required>
+                    <option value="homme">Male</option>
+                    <option value="femme">Female</option>
+                </select>
+            </div>
+            <input class="submit" type="submit" value="Submit">
+            <p style="margin-top: 20px;">Already have an account? <a style="color: rgb(255, 255, 255);font-weight: bold;" href="#" id="switchTologIn">Click here to log in</a></p>
+        </form>
+    </div>
+    <!-- End of landing section -->
+
+    <script src="consoleForm2.js"></script>
+</body>
+</html>

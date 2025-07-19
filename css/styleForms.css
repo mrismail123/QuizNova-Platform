@@ -1,0 +1,323 @@
+body {
+    font-family: sans-serif;
+    height: 100vh;
+}
+/* start global values */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    top: -10px;
+}
+
+.header ul li {
+    display: inline;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.header ul li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width:0%;
+    height: 2px;
+    left: 0;
+    background-color: dodgerblue;
+    /* background-color: rgb(255, 0, 0); */
+    transition: 0.3s;
+}
+
+.header ul li:hover::before {
+    width: 100%;
+}
+
+.header ul li a {
+    color: white;
+    font-size: 1.3rem;
+}
+
+
+
+@media (max-width:530px){
+    /* ul li.lastBefore {
+        padding-right: 25px;
+    } */
+    ul li {
+        font-size: 1rem ;
+    }
+}
+
+.header ul li:last-child{
+    padding-right: 25px;
+}
+
+
+ul li a:hover {
+    color: dodgerblue;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* start header */
+
+
+
+.header {
+    position: relative;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    height:120px;
+}
+
+.header .logo img {
+    max-width: 100%;
+    width: 140px;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo h1 {
+    text-shadow: 2px 2px 1px rgb(54, 52, 52);
+    color: white;
+}
+
+
+@media (max-width:970px) {
+    .header  {
+        justify-content: center;
+        flex-direction: column;
+        height: 150px;
+    }
+    .header .nav {
+        margin: 0 auto;
+    }
+    .header .logo img {
+        margin-inline-start: -40px;
+    }
+
+    .header ul li a {
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width:408px) {
+    .header ul li a {
+        font-size: 0.9rem;
+    }
+    .header .logo h1 {
+        font-size: 1.5rem;
+    }
+    .header .logo img  {
+        width: 100px;
+    }
+}
+/* end header */
+
+
+/* start landing */
+.landing {
+    min-height: 100vh;
+    background-image: url("../photos/charismatic-smiling-female-red-beanie-yellow-hoodie-walking-college-carry-backpack.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: .8s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -120px;
+}
+
+@media (max-width:970px) {
+    .landing {
+        top: -150px;
+    }
+}
+
+.landing::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.355);
+}
+.landing form#newAccountForm {
+    border-radius: 5px;
+    padding: 30px;
+    position: absolute; /*removed to allow flex centering*/
+    background-color: rgba(255, 255, 255, 0.891);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.landing form#newAccountForm a {
+    color: black !important;
+}
+
+@media (max-width:992px) {
+    .landing form#newAccountForm {
+        top: 15%;
+    }
+}
+.landing form input {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.landing form select {
+    width: 100%;
+    padding: 10px; 
+    margin-bottom: 10px;
+}
+.landing form > div:not(div.selects) {
+    display: flex;
+    gap: 10px;
+}
+
+.landing .right-form  form > div{
+    display:block !important;
+}
+
+.landing form input {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+}
+form input.submit {
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.685);
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+#newAccountForm {
+    display: none;
+    margin-top: 50px;
+}
+#loginSection {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.891);
+    padding: 30px;
+    border-radius: 5px;
+    max-width: 100%;
+    width: 1300px;
+    padding: 60px;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.891);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#loginSection a {
+    color: black !important;
+}
+
+@media (max-width:755px) {
+    #loginSection {
+        top: 20%;
+    }
+    
+    .header .nav ul li:last-child {
+        display: none;
+    }
+}
+
+.left-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.left-text h2 {
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+}
+.left-text p {
+    line-height: 1.8;
+    font-size: 1.5rem;
+    max-width: 100%;
+    width: 90%;
+    color: #333;
+}
+
+@media (max-width:500px) {
+    .left-text p {
+        display: none ;
+    }
+}
+
+.right-form {
+    flex: 1;
+}
+#loginForm .form-group {
+    margin-bottom: 15px;
+}
+#loginForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+#loginForm input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#loginForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.685);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    #loginSection {
+        flex-direction: column;
+    }
+    .left-text {
+        padding-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .left-text h2 {
+        font-size: 1.8rem;
+    }
+    .left-text p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+    #switchToSignup , #switchTologIn {
+        display: block;
+        text-align: center;
+    }
+}

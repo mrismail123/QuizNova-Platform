@@ -1,0 +1,831 @@
+body {
+    font-family: "Roboto";
+}
+
+/* start global values */
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box ;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* small */
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium */
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large */
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* special heading */
+.special-heading {
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 80px;
+  }
+  
+  .special-heading h1 {
+    font-size: 8rem;
+    color: #333333cc;
+    letter-spacing: -5px;
+    margin: 0;
+    position: relative;
+  }
+  
+  .underline {
+    width: 100px;
+    height: 4px;
+    background: #00bcd4;
+    margin: 20px auto 0;
+    border-radius: 2px;
+    animation: grow 1s ease-out;
+  }
+  
+  @keyframes grow {
+    from { width: 0; opacity: 0; }
+    to { width: 100px; opacity: 1; }
+  }
+  
+  @media (max-width: 768px) {
+    .special-heading h1 {
+      font-size: 6rem;
+    }
+  }
+  @media (max-width: 490px) {
+    .special-heading h1 {
+      font-size: 4rem;
+    }
+  }
+  
+
+/* end special heading */
+
+/* end global values */
+
+ul {
+    list-style: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.header ul li {
+    display: inline;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+    font-size: 1.2rem;
+}
+
+.header ul li::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width:0%;
+    height: 2px;
+    left: 0;
+    /* background-color: dodgerblue; */
+    background-color: rgb(255, 0, 0);
+    transition: 0.3s;
+}
+
+.header ul li:hover::before {
+    width: 100%;
+}
+
+
+.header ul li a {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.header ul li i {
+    color: white;
+}
+
+
+
+@media (max-width:530px){
+    ul li {
+        font-size: 1.1rem ;
+    }
+}
+
+
+
+ul li a:hover {
+    /* color: rgb(255, 255, 255); */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* start header */
+
+
+
+.header {
+    position: relative;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    height:120px;
+}
+
+.header .logo img {
+    max-width: 100%;
+    width: 120px;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo h1 {
+    text-shadow: 2px 2px 1px rgb(54, 52, 52);
+    color: white;
+}
+
+
+
+@media (max-width:914px) {
+    .header .nav {
+        margin: 0 auto;
+    }
+    .header .logo img {
+        margin-inline-start: -40px;
+    }
+    
+    .header ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width:992px) {
+    .header  {
+        justify-content: center;
+        flex-direction: column;
+        height: 120px;
+        padding-top: 50px;
+    }
+}
+
+
+@media (max-width:408px) {
+    .header ul li a {
+        font-size: 0.75rem;
+    }
+    .header .logo h1 {
+        font-size: 1.5rem;
+    }
+    .header .logo img  {
+        width: 100px;
+    }
+}
+
+/* end header */
+
+
+@media (max-width:567px) {
+    p {
+        font-size: 0.8rem;
+    }
+    h1 {
+        font-size:0.9rem;
+    }
+}
+
+/* start landing */
+
+.landing {
+    min-height:calc(100vh + 120px);
+    background-image: url("../photos/charismatic-smiling-female-red-beanie-yellow-hoodie-walking-college-carry-backpack.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: .8s;
+    top: -120px;
+}
+
+
+
+.landing::before {
+    content: "";
+    position: absolute;
+    z-index:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.355);
+}
+
+.landing .text {
+    text-shadow: 2px 2px 2px hwb(0 0% 100%);
+    position: relative;
+    position: absolute;
+    top: 30%;
+    left: -100%;
+    /* transform: translate(-190%,-50%); */
+    max-width: 100%;
+    width: 70%;
+    transition: 1.9s;
+    background-color: #eeeeee2b;
+    padding: 40px 30px;
+    /* padding: 30px 50px; */
+    /* text-align: center; */
+    opacity: 0;
+}
+
+.landing .text h1 {
+    margin: 0;
+    line-height: 1.2;
+    color: white;
+    font-size: 2.4rem;
+}
+
+.landing .text p {
+    margin-top: 20px;
+    line-height: 1.8;
+    color: #eee;
+    font-size: 1.1rem;
+    letter-spacing: .8px;
+
+}
+
+.landing .button {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: 1.8s;
+
+}
+
+.landing .button button {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.782);
+    padding: 20px 40px;
+    border: none;
+    letter-spacing: .6px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: 2.2s;
+}
+
+.landing .studentTeacher {
+    text-shadow: 5px 5px 3px black;
+    position: absolute;
+    top: 90%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    max-width: 100%;
+    width: 70%;
+    transition: 1.3s;
+    visibility: hidden;
+    display: flex;
+    gap: 10px;
+}
+.landing .studentTeacher button {
+    border: none;
+    padding: 10px 15px;
+    box-shadow: 1px 1px 13px black;
+}
+
+@media (max-width:914px) {
+    .landing {
+        top: -150px;
+    }
+}
+
+@media (max-width:870px) {
+    .landing .text {
+        padding: 15px;
+        max-width: 100%;
+        width:100%;
+        top: 40%;
+        left: 50%;
+        text-align: center;
+    }
+    .landing .text h1 {
+        font-size: 1.8rem;
+    } 
+    .landing .text p {
+        font-size: 1rem;
+    }
+    .landing .button {
+        top: 90%;
+        margin-top: 40px;
+    }
+    .landing .studentTeacher {
+        padding: 15px;
+        max-width: 100%;
+        width:100%;
+        left: 50%;
+    }
+}
+
+@media (max-width:460px) {
+    .landing .button {
+        top: 30%;
+        left: 50%;
+        margin-top: 90px;
+    }
+    .landing .text p {
+        /* display: none; */
+    }
+    .landing .text {
+        text-align: center;
+    }
+    ul li:last-child {
+        display: none;
+    } 
+    .landing .studentTeacher {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width:960px){
+    .landing .text h1 {
+        font-size: 1.9rem;
+        /* text-align: center; */
+    }
+    .landing .text p {
+        font-size: 1rem;
+    }
+} 
+
+/* end landing */
+
+/* start services */
+
+.services {
+    padding-block: 100px;
+    overflow: hidden;
+}
+.services .special-heading {
+    margin-bottom: 50px;
+}
+
+.services .services-content .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+
+.services .services-content .card .text {
+    padding: 10px 20px;
+    line-height: 2;
+    /* color: #000000; */
+}
+
+.services .services-content .card .text h1 {
+    text-transform: capitalize;
+    color: dodgerblue;
+}
+
+.services .services-content .card .text p {
+    /* margin-bottom: 15px; */
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #4a5568; /* gris moyen, lisible */
+    /* max-width: 700px; */
+    margin: 0 auto 1.25rem;
+    text-align: justify;
+}
+
+
+.services-content .card .image , .services-content .card .text {
+    transition: 1.3s;
+    opacity: 0.2;
+}
+
+.services .services-content .card:nth-child(1) .text,
+.services .services-content .card:nth-child(3) .text,
+.services .services-content .card:nth-child(5) .text {
+    transform: translateX(-90%);
+}
+
+.services .services-content .card:nth-child(2) .text,
+.services .services-content .card:nth-child(4) .text,
+.services .services-content .card:nth-child(6) .text {
+    transform: translateX(150%);
+}
+
+.services .services-content .card:nth-child(1) .image,
+.services .services-content .card:nth-child(3) .image,
+.services .services-content .card:nth-child(5) .image {
+    transform: translateX(-50%);
+    opacity: 0.2;
+}
+
+.services .services-content .card:nth-child(2) .image,
+.services .services-content .card:nth-child(4) .image,
+.services .services-content .card:nth-child(6) .image {
+    transform: translateX(50%);
+    opacity: 0.2;
+}
+
+.services-content .card .image img {
+    max-width: 100%;
+    width: 1000px;
+}
+
+@media (max-width:992px) {
+    .services .services-content .card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .services .services-content .card .text {
+        border-radius: 10px;
+    }
+}
+@media (max-width:500px) {
+    .services .intro {
+        display: none;
+    }
+}
+/* end services */
+
+/* start about  */
+
+.about {
+    padding-block: 100px;
+    overflow: hidden;
+    background-color: #ededed;
+}
+
+.about .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1.8;
+}
+.about .about-content > div {
+    flex-basis: 45%;
+    transition: 1.3s;
+}
+
+.about .about-content .text {
+    padding: 0px 0px 0px 20px ;
+    transform: translateX(-150%);
+}
+
+.about .about-content .text h1 {
+    color: #000000;
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+}
+
+.about .about-content .text p {
+    color: rgb(3, 3, 3);
+    font-size: 1rem;
+}
+
+.about .about-content .image {
+    position: relative;
+    margin-right: 10px;
+    transform: translateX(-50%);
+    opacity:0.2;
+}
+
+.about .about-content  .image::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: calc(100% + 20px);
+    background-color: rgb(18, 18, 18);
+    right: -6%;
+    top: -15px ;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: -1;
+}
+
+.about .about-content .image img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width:992px) {
+    .about .about-content {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    .about .about-content  .image::after {
+        width: calc(100% + 20px);
+        height: 20% ;
+        left: -10px;
+    }
+}
+
+@media (max-width:783px) {
+    .about .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+}
+
+/* end about  */
+
+/* start team */
+.team {
+    padding-block: 100px;
+    overflow: hidden;
+}
+
+.about2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (min-width:992px) {
+    .about2 > div {
+        flex-basis: 45%;
+    }
+}
+
+.about2 > div > h1 {
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about2 > div > p {
+    line-height: 1.8;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.about2 .profile {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+@media (max-width:767px) {
+    .about2 .profile {
+        flex-direction: column;
+    }
+    .about2 .profile .text  {
+        text-align: center ;
+    }
+}
+
+.about2 .profile .text {
+    border-bottom: 1px solid #ccc;
+    line-height: 1.8;
+}
+
+.about2 .profile img {
+    border-radius: 50%;
+    width: 100px;
+}
+
+.about2 .profile .text p {
+    color: #777;
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.about2 .skills  h4 {
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+.about2 .skills .prog {
+    width: 100%;
+    height: 30px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+    position:relative;
+}
+
+.about2 .skills .prog span {
+    position: absolute;
+    background-color: #19c8fa;
+    width: 100%;
+    height: 100%;
+}
+
+.about2 .skills .prog span::before {
+    content: attr(data-progress);
+    position: absolute;
+    background-color: black;
+    color: white;
+    right: -20px;
+    top: calc(0px - 40px);
+    padding: 7px;
+    border-radius: 4px;
+}
+
+.about2 .skills .prog span::after {
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    right: -10px;
+    top: calc(0px - 10px);
+}
+
+.about2 .testimonials {
+    transform: translateX(-150%);
+}
+.about2 .skills {
+    transform: translateX(-50%);
+}
+.about2 .testimonials  , .about2 .skills {
+    transition: 1.3s;
+}
+
+/* end team */
+
+/* start contact */
+.contact {
+    padding-block: 100px;
+    overflow: hidden;
+    background-color: #ededed;
+}
+
+.contact .container .contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.contact .container .contact-content > div {
+    flex-basis: 45%;
+}
+
+.contact .container .contact-content .image {
+    transform: translateX(-150%);
+    transition: 1.3s;
+}
+.contact .container .contact-content form {
+    transform: translateX(-50%);
+    transition: 1.3s;
+}
+
+.contact .container .contact-content .image img {
+    max-width: 100%;
+}
+
+.contact .container .contact-content form  {
+    width: 50%;
+}
+
+.contact .container .contact-content form input , textarea {
+    display: block;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.contact .container .contact-content form input.send {
+    margin-top: 20px;
+    width: 40%;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+@media (max-width:1200px) {
+    .contact .container .contact-content .image img {
+        transform: scale(1.2,1.2);
+    }
+
+}
+
+@media (max-width:770px) {
+    .contact .contact-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact .container .contact-content form {
+        width: 100%;
+    }
+    .contact .container .contact-content .image img {
+        transform: scale(1,1);
+    }
+}
+
+/* end contact */
+
+/* start footer */
+.footer {
+    background-image: url(../photos/charismatic-smiling-female-red-beanie-yellow-hoodie-walking-college-carry-backpack.jpg);
+    background-position: top right;
+    background-size: cover;
+    background-color: #1f1e1e;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    z-index:0;
+    width: 100%;
+    height: calc(100% + 100px);
+    background-color: rgba(0, 0, 0, 0.537);
+}
+
+.footer .imageHeading {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer img {
+    max-width: 100%;
+    width: 120px;
+    margin-top: 40px;
+}
+
+.footer h1 {
+    color: white;
+    border-bottom:1px solid white;
+    padding-bottom: 15px;
+}
+
+.footer .icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    position: relative;
+}
+
+.footer .icons i{
+    color: white;
+}
+
+.footer .icons i:hover {
+    color: dodgerblue;
+}
+
+.footer p:last-of-type {
+    margin-top: 40px;
+    color: white;
+    position: relative;
+}
+
+.footer p:last-of-type span {
+    color: dodgerblue;
+    font-weight: bold;
+}
+/* end footer */
